@@ -11,8 +11,10 @@ class constr;
     				max inside { [21:30], 55 };
   } //using inside keyword only given range of value will be assign to that variable we can also give range 
   
-  constraint distribution { min dist { [1:3] := 5 }; } //in min variable value 1 to 3 has weight 5 means chances of getting value 1 to 3 are higher then other values
-//dist controls how likely each value or range is picked during randomization by assigning weights.
+  constraint distribution { min dist { [1:3] := 5 }; } 
+  //dist can't apply to randc
+  //in min variable value 1 to 3 has weight 5 means chances of getting value 1 to 3 are higher then other values
+  //dist controls how likely each value or range is picked during randomization by assigning weights.
   
 
   function void pre_randomize();
